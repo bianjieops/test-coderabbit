@@ -1,0 +1,28 @@
+language: "en"
+early_access: false
+reviews:
+  high_level_summary: true
+  poem: true
+  review_status: true
+  collapse_walkthrough: false
+  path_filters:
+    - "!**/.xml"
+  path_instructions:
+    - path: "**.js"
+      instructions: "Review the JavaScript code for conformity with the Google JavaScript style guide, highlighting any deviations."
+    - path: "**.md"
+      instructions: "Check if there are any abnormalities in the markdown file format, and if so, please mark them out"
+    - path: "Dockerfile"
+      instructions: "Check whether the content of the dockerfile file conforms to dockerfile best practices and give opinions"
+  auto_review:
+    enabled: true
+    ignore_title_keywords:
+      - "WIP"
+      - "DO NOT MERGE"
+    drafts: false
+    base_branches:
+      - "develop"
+      - "feat"
+      - "feat/coderabbit-yml"
+chat:
+  auto_reply: false
